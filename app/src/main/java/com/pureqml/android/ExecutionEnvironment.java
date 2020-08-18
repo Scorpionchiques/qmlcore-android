@@ -294,7 +294,7 @@ public final class ExecutionEnvironment extends Service
             @Override
             public void invoke(V8Object v8Object, V8Array v8Array) {
                 Log.i(TAG, "closing App: " + v8Array);
-                System.exit(0);
+                android.os.Process.killProcess(android.os.Process.myPid());
             }
         }, "closeApp");
 
